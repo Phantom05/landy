@@ -1534,6 +1534,28 @@ a:hover.back-to-top {
 	background-color: #f9fafc;
 }
 
+.contact__form__row{
+	position: relative;
+	margin-bottom: 10px;
+}
+.contact__form_input{
+	display: block;
+	width: 100%;
+	padding:10px;
+	border: 1px solid #9791ae;
+	border-radius: 0.25rem;
+	background-color: #413d52;
+	color: #f1f1f8;
+	font: 400 0.875rem/1.875rem "Open Sans", sans-serif;
+	-webkit-transition: all 0.2s ease;
+	-o-transition: all 0.2s ease;
+	transition: all 0.2s ease;
+	-webkit-appearance: none;
+	&::placeholder{
+		color:rgb(214, 214, 214);
+	}
+}
+
 
 /*****************************/
 /*     18. Media Queries     */

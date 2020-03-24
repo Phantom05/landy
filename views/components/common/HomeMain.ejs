@@ -11,65 +11,8 @@
 
 
   <!-- Navigation -->
-  <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
-    <!-- Text Logo - Use this if you don't have a graphic logo -->
-    <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
-    <!-- Image Logo -->
-    <a class="navbar-brand logo-image" href="index.html"><img src="/img-common/logo.svg" alt="alternative"></a>
 
-    <!-- Mobile Menu Toggle Button -->
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
-      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-awesome fas fa-bars"></span>
-      <span class="navbar-toggler-awesome fas fa-times"></span>
-    </button>
-    <!-- end of mobile menu toggle button -->
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#header">HOME <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#features">FEATURES</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#preview">PREVIEW</a>
-        </li>
-
-        <!-- Dropdown Menu -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle page-scroll" href="#details" id="navbarDropdown" role="button"
-            aria-haspopup="true" aria-expanded="false">DETAILS</a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="terms-conditions.html"><span class="item-text">TERMS CONDITIONS</span></a>
-            <div class="dropdown-items-divide-hr"></div>
-            <a class="dropdown-item" href="privacy-policy.html"><span class="item-text">PRIVACY POLICY</span></a>
-          </div>
-        </li>
-        <!-- end of dropdown menu -->
-
-        <li class="nav-item">
-          <a class="nav-link page-scroll" href="#contact">CONTACT</a>
-        </li>
-      </ul>
-      <span class="nav-item social-icons">
-        <span class="fa-stack">
-          <a href="#your-link">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-facebook-f fa-stack-1x"></i>
-          </a>
-        </span>
-        <span class="fa-stack">
-          <a href="#your-link">
-            <i class="fas fa-circle fa-stack-2x"></i>
-            <i class="fab fa-twitter fa-stack-1x"></i>
-          </a>
-        </span>
-      </span>
-    </div>
-  </nav> 
   <!-- end of navbar -->
   <!-- end of navigation -->
 
@@ -849,34 +792,62 @@
 
           <!-- Contact Form -->
           <form id="contactForm" data-toggle="validator" data-focus="false">
-            <div class="form-group">
-              <input type="text" class="form-control-input" id="cname" required>
+
+
+
+            <div class="form-group contact__form__row">
+              <input 
+                type="cname" 
+                class="form-control-input" 
+                id="cname" 
+                required 
+                name="cname"
+                autocomplete="off"
+              >
               <label class="label-control" for="cname">Name</label>
-              <div class="help-block with-errors"></div>
             </div>
-            <div class="form-group">
-              <input type="email" class="form-control-input" id="cemail" required>
+            <div class="form-group contact__form__row">
+              
+              <input 
+                type="email" 
+                class="form-control-input" 
+                id="cemail" 
+                required 
+                name="cemail"
+                autocomplete="off"
+              >
               <label class="label-control" for="cemail">Email</label>
-              <div class="help-block with-errors"></div>
             </div>
-            <div class="form-group">
-              <textarea class="form-control-textarea" id="cmessage" required></textarea>
-              <label class="label-control" for="cmessage">Your message</label>
-              <div class="help-block with-errors"></div>
+            <div class="form-group contact__form__row">
+              <textarea 
+                class="form-control-textarea" 
+                id="ccontent" 
+                required 
+                name="ccontent"
+                autocomplete="off"
+              ></textarea>
+              <label class="label-control" for="ccontent">Your message</label>
+              <!-- <div class="help-block with-errors"></div> -->
             </div>
             <div class="form-group checkbox">
-              <input type="checkbox" id="cterms" value="Agreed-to-Terms" required>I have read and agree to Leno's stated
+              <input 
+                type="checkbox" 
+                id="cterms" 
+                value="Agreed-to-Terms" 
+                required name="cterms"
+              >I have read and agree to Leno's stated
               conditions in <a href="privacy-policy.html">Privacy Policy</a> and <a href="terms-conditions.html">Terms
                 Conditions</a>
               <div class="help-block with-errors"></div>
             </div>
             <div class="form-group">
-              <button type="submit" class="form-control-submit-button">SUBMIT MESSAGE</button>
+              <button type="submit" class="form-control-submit-button" id="messageSubmitBtn">SUBMIT MESSAGE</button>
             </div>
             <div class="form-message">
               <div id="cmsgSubmit" class="h3 text-center hidden"></div>
             </div>
           </form>
+
           <!-- end of contact form -->
 
         </div> <!-- end of col -->
@@ -886,85 +857,4 @@
   <!-- end of contact -->
 
 
-  <!-- Footer -->
-  <div class="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="footer-col">
-            <h4>About <span data-brand-name>brand</span></h4>
-            <p>We're passionate about creating the best Program App for personal development</p>
-          </div>
-        </div> <!-- end of col -->
-        <div class="col-md-4">
-          <div class="footer-col middle">
-            <h4>Important Links</h4>
-            <ul class="list-unstyled li-space-lg">
 
-              <!-- <li class="media">
-                <i class="fas fa-square"></i>
-                <div class="media-body">Our business partners <a class="turquoise"
-                    href="#your-link">startupguide.com</a></div>
-              </li> -->
-
-              <li class="media">
-                <i class="fas fa-square"></i>
-                <div class="media-body">Read our <a class="turquoise" href="terms-conditions.html">Terms &
-                    Conditions</a>, <a class="turquoise" href="privacy-policy.html">Privacy Policy</a></div>
-              </li>
-            </ul>
-          </div>
-        </div> <!-- end of col -->
-        <div class="col-md-4">
-          <div class="footer-col last">
-            <h4>Social Media</h4>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-facebook-f fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-google-plus-g fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-instagram fa-stack-1x"></i>
-              </a>
-            </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-linkedin-in fa-stack-1x"></i>
-              </a>
-            </span>
-          </div>
-        </div> <!-- end of col -->
-      </div> <!-- end of row -->
-    </div> <!-- end of container -->
-  </div> <!-- end of footer -->
-  <!-- end of footer -->
-
-
-  
-  <!-- Copyright -->
-  <div class="copyright">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="p-small">Copyright © 2020 <a href="https://inovatik.com"><span data-brand-name>brand</span></a> - All rights reserved</p>
-        </div> <!-- end of col -->
-      </div> <!-- enf of row -->
-    </div> <!-- end of container -->
-  </div> <!-- end of copyright -->
-  <!-- end of copyright -->

@@ -378,4 +378,38 @@
   const brandNameTarget = [$('[data-brand-name]')];
   brandNameTarget.map(item => item.html(brandName));
 
+
+  $('#contactForm').on('submit',async function(e){
+    e.preventDefault();
+    console.log('contactForm');
+    const getFormData = $( this ).serializeArray();
+    const config ={
+      url:"/form",
+      method:'post',
+      data:getFormData
+    }
+    console.log(getFormData);
+
+    const hasAllData = getFormData.every(item=>item.value.length >1 );
+    const isTermChecked = document.getElementById('cterms').checked;
+    if(!(hasAllData && isTermChecked)){
+      alert('내용을 모두 기입해주세요.');
+      return;
+    }
+    const {data,error} = await axios(config).catch(err=>({error:err}));
+    if(data && !error){
+      if(data.result === 1){
+        $(this)[0].reset();
+        document.getElementById('cname').value = ""
+        document.getElementById('cemail').value = ""
+        document.getElementById('cterms').value = ""
+        document.getElementById('ccontent').value = ""
+        alert('전송되었습니다.');
+      }
+    }else{
+      console.log(error,'error');
+    }
+  })
+
+
 })(jQuery);

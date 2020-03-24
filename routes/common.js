@@ -83,7 +83,8 @@ const pagePath = {
   users: "pages/users",
   view_page: `pages/viewPages`,
   modal: `components/base/helpers/modal`,
-  form:`pages/form`
+  form:`pages/form`,
+  view:"pages/view"
 };
 const pageName = {
   main: "main",

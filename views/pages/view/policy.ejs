@@ -1,0 +1,17 @@
+<% layout(_layoutFile) -%>
+<% block('stylesheets').append(
+  `<link rel="stylesheet" href="${co.localsFilePath.home.css}">`
+) %>
+<% block('scripts').append(
+  `<script src="${co.localsFilePath.home.js}"></script>`
+) %>
+<% block('header').append(
+  include(`${_components}/base/helpers/header.ejs`,{headerName:"home"})
+) %>
+<% block('footer').append(
+  include(`${_components}/base/helpers/footer.ejs`)
+) %>
+
+<% var main = include(`${_components}/common/PolicyMain.ejs`); %>
+<%- main %>
+
