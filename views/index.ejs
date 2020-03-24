@@ -1,0 +1,24 @@
+<% layout(_layoutFile) -%>
+<% block('stylesheets').append(
+  `<link rel="stylesheet" href="${co.localsFilePath.home.css}">`
+) %>
+<% block('head').append(
+  '<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />'
+) %>
+<% block('scripts').append(
+  `<script src="${co.localsFilePath.home.js}"></script>`
+) %>
+
+<% block('header').append(
+  include(`${_components}/base/helpers/header.ejs`,{headerName:"home"})
+) %>
+<% block('footer').append(
+  include(`${_components}/base/helpers/footer.ejs`)
+) %>
+
+<!-- <% var main = isLogged? include(`${_components}/common/HomeMainLoggin.ejs`) : include(`${_components}/common/HomeMain.ejs`); %> -->
+<% var main = include(`${_components}/common/HomeMain.ejs`); %>
+
+<%- include(`${_components}/base/template/HomeTemplate`,{
+  main
+})%>

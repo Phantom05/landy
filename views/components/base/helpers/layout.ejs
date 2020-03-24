@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Leno - Mobile App HTML Landing Page Template</title>
+  <%- include head.ejs %>
+  <%- block('head').toString() %>
+  <%- block('stylesheets').toString() %>
+</head>
+
+<body data-spy="scroll" data-target=".fixed-top">
+  <%- block('header').toString() %>
+  <main>
+    <%-body -%>
+  </main>
+  <%- block('footer').toString() %>
+  <%- include foot.ejs %>
+  <%- block('scripts').toString() %>
+</body>
+
+</html>

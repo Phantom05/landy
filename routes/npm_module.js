@@ -1,0 +1,17 @@
+exports.axios           = require('axios');
+exports.path            = require('path');
+exports._               = require('lodash');
+exports.svgCaptcha      = require('svg-captcha');
+exports.express         = require('express');
+exports.moment          = require('moment');
+exports.fetch           = require('node-fetch');
+exports.moment_timezone = require('moment-timezone');
+exports.EventEmitter    = require('events').EventEmitter;
+exports.AWS             = require("aws-sdk");
+exports.util            = require('util');
+exports.ejs             = require('ejs');
+exports.fs              = require('fs');
+exports.multer          = require('multer');
+exports.FormData        = require('form-data');
+exports.formidable      = require('formidable');
+exports.dotenv          = require("dotenv");;

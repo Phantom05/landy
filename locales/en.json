@@ -1,0 +1,30 @@
+{
+  "helloWorld": "Hello, World!",
+  "lang":{
+    "lang_country_code":"en",
+    "name":"English",
+    "menu_list":{
+      "ko":"Korean",
+      "en":"English"
+    }
+  },
+  "nested": {
+    "inner": "Nested property"
+  },
+  "main_menu":{
+    "join":"Join",
+    "designer":"Designer",
+    "dentist":"Client",
+    "project":"Project",
+    "about":"About",
+    "login":"Login",
+    "pricing":"Pricing",
+    "logout":"Logout",
+    "mypage":"Mypage"
+  },
+  "about":{
+    "section1":"1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim beatae reprehenderit dicta molestias molestiae amet doloremque possimus eaque, tenetur dolorum magnam mollitia adipisci quae aliquam recusandae provident ipsam. Reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laboriosam saepe aspernatur, ullam sit in debitis quos doloremque, quaerat voluptatem ipsam obcaecati numquam ducimus sapiente beatae est alias dolor porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium ipsam nemo ducimus quos odit dicta, doloribus possimus suscipit aspernatur nulla, architecto quam, rem quod qui dolorum deserunt. Nam, mollitia!",
+    "section2":"2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim beatae reprehenderit dicta molestias molestiae amet doloremque possimus eaque, tenetur dolorum magnam mollitia adipisci quae aliquam recusandae provident ipsam. Reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laboriosam saepe aspernatur, ullam sit in debitis quos doloremque, quaerat voluptatem ipsam obcaecati numquam ducimus sapiente beatae est alias dolor porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium ipsam nemo ducimus quos odit dicta, doloribus possimus suscipit aspernatur nulla, architecto quam, rem quod qui dolorum deserunt. Nam, mollitia!",
+    "section3":"3.Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem enim beatae reprehenderit dicta molestias molestiae amet doloremque possimus eaque, tenetur dolorum magnam mollitia adipisci quae aliquam recusandae provident ipsam. Reiciendis. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laboriosam saepe aspernatur, ullam sit in debitis quos doloremque, quaerat voluptatem ipsam obcaecati numquam ducimus sapiente beatae est alias dolor porro? Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium ipsam nemo ducimus quos odit dicta, doloribus possimus suscipit aspernatur nulla, architecto quam, rem quod qui dolorum deserunt. Nam, mollitia!"
+  }
+}
