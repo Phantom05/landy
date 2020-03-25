@@ -79,8 +79,14 @@ router.get('/', function(req, res, next) {
       name:`Ann Black`
     },
   ];
+  const price={
+    basic:`Development efforts. Try Lolantic mobile app for any mobile platform platform Get a solid foundation for your self development efforts. Try Lolantic mobile app development efforts. Try Lolantic mobile app for any mobile platform platform for any mobile platform`,
+    premium:`Get a solid foundation for your self development efforts. Try Lolantic mobile app
+    for any mobile Get a solid foundation for your self development efforts. Try Lolantic mobile app for any mobile platform platform`
+  }
   const body={};
   body.reviewList = reviewList;
+  body.price = price;
   res.render('index',body);
 });
 

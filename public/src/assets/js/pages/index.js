@@ -5,6 +5,26 @@
 */
 
 
+function elt(name, attributes) {
+  var node = document.createElement(name);
+  if (attributes && typeof attributes !== "string") {
+    for (var attr in attributes) {
+      if (attributes.hasOwnProperty(attr)) {
+        node.setAttribute(attr, attributes[attr]);
+      }
+    }
+  }
+  for (var i = 2; i < arguments.length; i++) {
+    var child = arguments[i];
+    if (typeof child === "string") {
+      child = document.createTextNode(child);
+    }
+    node.append(child);
+  }
+  return node;
+}
+
+
 (function ($) {
   "use strict";
 
@@ -378,55 +398,82 @@
   brandNameTarget.map(item => item.html(brandName));
 
 
-  $('#contactForm').on('submit',async function(e){
+  $('#contactForm').on('submit', async function (e) {
     e.preventDefault();
-    console.log('contactForm');
-    const getFormData = $( this ).serializeArray();
-    const config ={
-      url:"/form",
-      method:'post',
-      data:getFormData
+    const getFormData = $(this).serializeArray();
+    const config = {
+      url: "/form",
+      method: 'post',
+      data: getFormData
     }
-    console.log(getFormData);
-
-    const hasAllData = getFormData.every(item=>item.value.length >1 );
+    const onlyInputList = _.filter(getFormData, item => item.name !== 'cterms');
+    const hasAllData = onlyInputList.every(item => item.value.length > 1);
     const isTermChecked = document.getElementById('cterms').checked;
-    
-    if(!(hasAllData)){
-      alert('내용을 모두 기입해주세요.');
+
+    if (!hasAllData) {
+      modal({
+        type: "alert",
+        title: "실패하였습니다.",
+        content: `내용을 모두 기입해주세요.`
+      })
       return;
     }
 
-    if(!isTermChecked) return ;
-    const {data,error} = await axios(config).catch(err=>({error:err}));
-    if(data && !error){
-      if(data.result === 1){
+    if (!isTermChecked) return;
+    const { data, error } = await axios(config).catch(err => ({ error: err }));
+    if (data && !error) {
+      if (data.result === 1) {
         $(this)[0].reset();
-        document.getElementById('cname').value = ""
-        document.getElementById('cemail').value = ""
-        document.getElementById('cterms').value = ""
-        document.getElementById('ccontent').value = ""
-        alert('전송되었습니다.');
+        modal({
+          type: "alert",
+          title: "완료되었습니다.",
+          content: `메일 확인 후 회신드리겠습니다.`
+        })
       }
-    }else{
-      console.log(error,'error');
+    } else {
+      console.log(error, 'error');
     }
   })
 
 
-
-  $(document).ready(function() {
+  $(document).ready(function () {
     $(".dotdotdot").dotdotdot({
-      wrapper  : 'div',  /*  콘텐트를 감쌀 요소. */
-      ellipsis: '... ',  /*  말줄임표를 뭘로 할지 */
-      wrap  : 'word',    /*  자를 단위. 다음 옵션 중 하나 선택: 'word'/'letter'/'children' */
-      after  : null,     /*  자르고 나서도 유지시킬 요소를 jQuery 선택자로 적는다. */
-      watch  : false,    /*  윈도우가 리사이즈될 때 업데이트할 건지: true/'window' */
-      height  : null,     /*  선택. max-height를 지정한다. 만약 null이면 알아서 잰다. */
+      wrapper: 'div',  /*  콘텐트를 감쌀 요소. */
+      ellipsis: '...',  /*  말줄임표를 뭘로 할지 */
+      wrap: 'word',    /*  자를 단위. 다음 옵션 중 하나 선택: 'word'/'letter'/'children' */
+      after: null,     /*  자르고 나서도 유지시킬 요소를 jQuery 선택자로 적는다. */
+      watch: 'window',    /*  윈도우가 리사이즈될 때 업데이트할 건지: true/'window' */
+      height: 130,     /*  선택. max-height를 지정한다. 만약 null이면 알아서 잰다. */
       tolerance: 0       /*  글이 넘치면 이만큼쯤 height를 늘린다 */
     });
   });
 
-
-
 })(jQuery);
+
+function modal(props) {
+  const confirmTag = props.type === 'confirm' ? `
+  <button type="button" class="btn btn-default" data-dismiss="modal">CANCEL</button>`: "";
+  const modalTemplate = `
+  <div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+        <p class="modal-body-info main">${props.title}</p>
+        <p class="modal-body-info sub">${props.content}</p>
+      </div>
+      <div class="btn-box">
+        <button type="button" class="btn btn-default" data-dismiss="modal" id="modalBtn">OK</button>
+        ${confirmTag}
+      </div>
+    </div>
+    
+  </div>
+</div>
+`
+  $('body').append(modalTemplate);
+  $("#myModal").modal();
+
+  $('#myModal').on('hidden.bs.modal', function () {
+    $("#myModal").remove()
+  });
+}

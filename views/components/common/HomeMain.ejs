@@ -766,7 +766,7 @@
       <div class="col-lg-12 ">
         <div class="row price">
           <div class="col-lg-6 ">
-            <div class="card">
+            <div class="card price__card">
               <div class="card-body">
                 <h4 class="card-title basic">Basic</h4>
                 <div class="price_circle_box">
@@ -776,9 +776,17 @@
                     </div>
                   </span>
                 </div>
-                <p class="card-info dotdotdot">Development efforts. Try Lolantic mobile app for any mobile platform platform Get a solid foundation for your self development efforts. Try Lolantic mobile app development efforts. Try Lolantic mobile app for any mobile platform platform
-                  for any mobile
-                  platform</p>
+                <p class="card-info dotdotdot" id="priceBasicTooltip" title = "<%= price.basic %>"><%= price.basic %></p>
+
+                <div class="popupLayer">
+                  <div>
+                    <span  style="cursor:pointer;font-size:1.5em" title="닫기">X</span>
+                  </div>
+                  여긴 레이어~</br>
+                  클릭하면 바로 나타나는 레이어에요^^
+                </div>
+
+
                 <div class="price__btn_box">
                   <a href="" class="price__btn">
                     PICK NOW
@@ -798,8 +806,7 @@
                     </span>
                   </span>
                 </div>
-                <p class="card-info dotdotdot">Get a solid foundation for your self development efforts. Try Lolantic mobile app
-                  for any mobile Get a solid foundation for your self development efforts. Try Lolantic mobile app for any mobile platform platform</p>
+                <p class="card-info dotdotdot" id="pricePrimeumTooltip" title="<%= price.premium %>"><%= price.premium %></p>
                 <div class="price__btn_box">
                   <a href="" class="price__btn premium">
                     PICK NOW
@@ -874,3 +881,4 @@
   </div> <!-- end of container -->
 </div> <!-- end of form -->
 <!-- end of contact -->
+

@@ -41,6 +41,11 @@ Colors:
 /******************************/
 /*     01. General Styles     */
 /******************************/
+
+$device_pc:1200px;
+$device_tablet:992px;
+$device_mobile:768px;
+
 body,
 html {
     width: 100%;
@@ -759,6 +764,37 @@ input[type='checkbox'] {
 	margin-right: 0.125rem;
 }
 
+.modal-body-info{
+	color: black;
+	margin-bottom: 0;
+	font-size: 20px;
+	text-align: center;
+	&.main{
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
+	
+}
+.modal{
+	.modal-body{
+		padding-top: 50px;
+	}
+	.btn-box{
+		text-align: center;
+		padding:20px;
+		padding-bottom: 40px;
+	}
+	.btn{
+		background: #1457a8;
+		color: white;
+		padding:5px 30px;
+		&:hover{
+			opacity: .9;
+			// background: #eee;
+		}
+	}
+}
 
 /*********************/
 /*    04. Header     */
@@ -1617,7 +1653,8 @@ a:hover.back-to-top {
 		margin-top: 20px;
 		color: #6f87aa;
 		font-size: 14px;
-		height: 100px;
+		height: 130px;
+		text-align: left;
 	}
 	.col-lg-6{
 		// padding:60px;
@@ -1691,6 +1728,30 @@ a:hover.back-to-top {
 		background: orange;
 	}
 }
+
+
+
+.imgSelect {
+	cursor: pointer;
+}
+
+.popupLayer {
+	position: absolute;
+	display: none;
+	background-color: #ffffff;
+	border: solid 2px #d0d0d0;
+	width: 350px;
+	height: 150px;
+	padding: 10px;
+	z-index: 10;
+}
+.popupLayer div {
+	position: absolute;
+	top: 5px;
+	right: 5px
+}
+
+
 /*****************************/
 /*     18. Media Queries     */
 /*****************************/	
@@ -2108,6 +2169,7 @@ a:hover.back-to-top {
 /* Min-width width 1200px */
 @media (min-width: 1200px) {
 	
+
 	/* Navigation */
 	.navbar-custom {
 		padding: 2.125rem 5rem 2.125rem 5rem;
@@ -2261,6 +2323,42 @@ a:hover.back-to-top {
 	.ex-basic-2 .image-container-small {
 		margin-left: 1.75rem;
 	}
+
 	/* end of extra pages */
 }
 /* end of min-width width 1200px */
+
+
+
+@media screen and (max-width:$device_pc){
+	.price{
+		.card{
+			width:90% ;
+		}
+	}
+}
+
+@media screen and (max-width:$device_tablet){
+	.price{
+		.card{
+			width:80%
+		}
+		.col-lg-6{
+			text-align: center;
+			&:last-child{
+				text-align: center;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+@media screen and (max-width:$device_mobile){
+	.price{
+		.card{
+			width:90%
+		}
+		.card-info{
+			height: auto;
+		}
+	}
+}
