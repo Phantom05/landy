@@ -32,19 +32,17 @@ router.get('/', function(req, res, next) {
       id:0,
       // profile:"/img-common/testimonial-1.jpg",
       profile:`/img-common/default_person2_icon.png`,
-      reviewSummary:`I just finished my trial period and was so amazed with the support and
-      results that I purchased .`,
-      name:`Jude Thorn - Designer`,
-      job:`Designer`,
+      reviewSummary:`최고!! 이거 사용하고 시간이 훨씬 줄었어요 ㅋㅋ 사람들 많이 안썼으면 좋겠네요 ㅠㅠ`,
+      name:`김**`,
+      job:`kh****`,
     },
     {
       id:1,
       // profile:"/img-common/testimonial-2.jpg",
       profile:`/img-common/default_person2_icon.png`,
-      reviewSummary:`I just finished my trial period and was so amazed with the support and
-      results that I purchased .`,
-      job:`Developer`,
-      name:`Roy Smith`
+      reviewSummary:`솔직히 비싼거 같아서 조금 망설였는데 60주고 1000이득 봤네요 ㅎㅎ 완전 효자 프로그램 ㅎㅎ`,
+      name:`이**`,
+      job:`mo*****`,
     },
     {
       id:2,
