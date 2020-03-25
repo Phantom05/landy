@@ -3,7 +3,10 @@
   <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Leno</a> -->
 
   <!-- Image Logo -->
-  <a class="navbar-brand logo-image" href="/"><img src="/img-common/logo.svg" alt="alternative"></a>
+  <a class="navbar-brand logo-image" href="/">
+    <!-- <img src="/img-common/logo.svg" alt="alternative"> -->
+    <%= barndName.toUpperCase() %>
+  </a>
 
   <!-- Mobile Menu Toggle Button -->
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
@@ -25,10 +28,14 @@
         <a class="nav-link page-scroll" href="#preview">PREVIEW</a>
       </li>
 
+      <li class="nav-item">
+        <a class="nav-link page-scroll" href="#details">DETAILS</a>
+      </li>
+
       <!-- Dropdown Menu -->
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle page-scroll" href="#details" id="navbarDropdown" role="button"
-          aria-haspopup="true" aria-expanded="false">DETAILS</a>
+        <a class="nav-link dropdown-toggle page-scroll" id="navbarDropdown" role="button"
+          aria-haspopup="true" aria-expanded="false">POLICY</a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="/view/tems"><span class="item-text">TERMS CONDITIONS</span></a>
           <div class="dropdown-items-divide-hr"></div>
@@ -36,7 +43,9 @@
         </div>
       </li>
       <!-- end of dropdown menu -->
-
+      <li class="nav-item">
+        <a class="nav-link page-scroll" href="#price">PRICE</a>
+      </li>
       <li class="nav-item">
         <a class="nav-link page-scroll" href="#contact">CONTACT</a>
       </li>
@@ -44,8 +53,11 @@
     <span class="nav-item social-icons">
       <span class="fa-stack">
         <a href="#your-link">
-          <i class="fas fa-circle fa-stack-2x"></i>
-          <i class="fab fa-facebook-f fa-stack-1x"></i>
+          <span>
+            <img
+              src="/img-common/kakao_icon.png"
+              alt="" width="30">
+          </span>
         </a>
       </span>
       <span class="fa-stack">

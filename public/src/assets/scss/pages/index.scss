@@ -1556,7 +1556,141 @@ a:hover.back-to-top {
 	}
 }
 
+.circle__list{
+	position: relative;
+	margin-right: 5px;
+	font-size: 5px;
+	top:6px;
+	&:before{
+		color:#00c9db
+	}
+}
+.media-info{
+	font-size: 15px;
+}
+.circle__subtitle{
+	font-size: 18px;
+}
+.circle__icon_box{
+	position: relative;
+	display: inline-block;
+	width:50px;
+	height: 50px;
+	background: white;
+	border-radius: 100%;
+	transition: .2s;
+	&:hover{
+		background: #00c9db;
+	}
+}
+.circle__icon_img{
+	position: absolute;
+	left: 50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+}
+.footer__icon_row{
+	margin-top: 5px;
+}
 
+.price{
+	.card, .card-title, .card-info{
+		color: black;
+	}
+	.card{
+		display: inline-block;
+		width:75%;
+	}
+	.card-title{
+		margin-bottom: 47px;
+		font-size:40px;
+		text-align: center;
+		&.premium{
+
+		}
+	}
+	.card-body{
+		padding:60px 50px;
+		padding-top: 80px;
+	}
+	.card-info{
+		margin-top: 20px;
+		color: #6f87aa;
+		font-size: 14px;
+		height: 100px;
+	}
+	.col-lg-6{
+		// padding:60px;
+		text-align: right;
+		&:last-child{
+			text-align: left;
+		}
+	}
+}
+.price__btn_box{
+	text-align: center;
+}
+.price__btn{
+	display: inline-block;
+	padding:20px 40px;
+	border-radius: 60px;
+	background: orange;
+	color: white;
+	font-size: 17px;
+	font-weight: bold;;
+	text-decoration: none;
+	&.premium{
+		background: #0f73ee;
+	}
+}
+.price_circle_box{
+	text-align: center;
+}
+.price_circle_icon{
+	$size:120px;
+	display: inline-block;
+	width:$size;
+	height: $size;
+	position: relative;
+	border: 4px solid rgb(189, 207, 241);
+	background: #0f73ee;
+	box-shadow: 0 0 8px 2px rgba(0,0,0,0.2);
+	border-radius: 100%;
+	color: white;
+	&.premium{
+		background: #1d3b5f;
+	}
+}
+.price_circle_tx{
+	position: absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%,-50%);
+	font-weight: bold;
+	font-size: 30px;
+	width:100%;
+	text-align: center;
+}
+.price_circle_small{
+	font-size: 25px;
+}
+.price__section{
+	background: #2F2C44;
+}
+.title__line_box{
+	text-align: center;
+	position: relative;
+	padding: 25px 0;
+	&:after{
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		content: '';
+		height: 2px;
+		width:200px;
+		background: orange;
+	}
+}
 /*****************************/
 /*     18. Media Queries     */
 /*****************************/	
@@ -1586,6 +1720,9 @@ a:hover.back-to-top {
 	.navbar-custom .navbar-brand.logo-text {
 		color: #fff;
 	}
+	.navbar-brand{
+		text-decoration: none;
+	}
 
 	.navbar-custom .navbar-nav {
 		margin-top: 0;
@@ -1594,6 +1731,7 @@ a:hover.back-to-top {
 	.navbar-custom .nav-item .nav-link {
 		padding: 0.25rem 0.75rem 0.25rem 0.75rem;
 		color: #fff;
+		cursor: pointer;
 	}
 	
 	.navbar-custom .nav-item .nav-link:hover,

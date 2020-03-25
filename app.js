@@ -50,6 +50,7 @@ app.use(function(req, res, next) {
     if (cond) return value;
     return "";
   };
+  res.locals.barndName= 'lolantic';
   res.locals._stylesheets = "/dist/assets/css";
   res.locals._components = __dirname + "/views/components";
   res.locals._layoutFile = `/components/base/helpers/layout`;

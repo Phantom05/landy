@@ -27,7 +27,61 @@ const {
 } = require('./middleware');
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  const reviewList = [
+    {
+      id:0,
+      // profile:"/img-common/testimonial-1.jpg",
+      profile:`/img-common/default_person2_icon.png`,
+      reviewSummary:`I just finished my trial period and was so amazed with the support and
+      results that I purchased .`,
+      name:`Jude Thorn - Designer`,
+      job:`Designer`,
+    },
+    {
+      id:1,
+      // profile:"/img-common/testimonial-2.jpg",
+      profile:`/img-common/default_person2_icon.png`,
+      reviewSummary:`I just finished my trial period and was so amazed with the support and
+      results that I purchased .`,
+      job:`Developer`,
+      name:`Roy Smith`
+    },
+    {
+      id:2,
+      // profile:"/img-common/testimonial-3.jpg",
+      profile:`/img-common/default_person2_icon.png`,
+      reviewSummary:`Searching for a great marketing automation app was difficult but thankfully I found .`,
+      job:`Marketer`,
+      name:`Marsha Singer`
+    },
+    {
+      id:3,
+      // profile:"/img-common/testimonial-4.jpg",
+      profile:`/img-common/default_person2_icon.png`,
+      reviewSummary:`This app has the potential of becoming a mandatory tool in every marketer's day to day operations.`,
+      job:`Designer`,
+      name:`Tim Shaw`
+    },
+    {
+      id:4,
+      // profile:"/img-common/testimonial-5.jpg",
+      profile:`/img-common/default_person2_icon.png`,
+      reviewSummary:`This app has the potential of becoming a mandatory tool in every marketer's day to day operations.`,
+      job:`Marketer`,
+      name:`Lindsay Spice`
+    },
+    {
+      id:5,
+      // profile:"/img-common/testimonial-6.jpg",
+      profile:`/img-common/default_person_icon.png`,
+      reviewSummary:`This app has the potential of becoming a mandatory tool in every marketer's day to day operations.`,
+      job:`Developer`,
+      name:`Ann Black`
+    },
+  ];
+  const body={};
+  body.reviewList = reviewList;
+  res.render('index',body);
 });
 
 
