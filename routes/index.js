@@ -26,7 +26,10 @@ const {
   wrap
 } = require('./middleware');
 /* GET home page. */
+
+// 라우터
 router.get('/', function(req, res, next) {
+  // 백엔드 한태 데이터 요청 
   const reviewList = [
     {
       id:0,
